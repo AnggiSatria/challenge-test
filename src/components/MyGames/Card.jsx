@@ -1,11 +1,8 @@
 import React from 'react'
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import { Link } from 'react-router-dom';
 import IMG from "../../assets/img/outlast.png"
+import { Link } from 'react-router-dom'
 
-
-function Cards() {
+function Card() {
 
     const card = [
         {
@@ -35,8 +32,8 @@ function Cards() {
     ]
 
   return (
-    <div style={{display : "flex", flexWrap : "wrap"}}>
-        {card.map((value) => {
+    <div>
+         {card.map((value) => {
             return <Link to="/games" style={{marginLeft : '10px', textDecoration : "none"}}><Card style={{ width: '14rem' }}>
             <Card.Img variant="top" src={value.img} />
             <Card.Body style={{padding : '15px'}}>
@@ -63,4 +60,4 @@ function Cards() {
   )
 }
 
-export default Cards
+export default Card

@@ -1,8 +1,8 @@
 import React from 'react'
 import Navbar from '../components/navbar/navbar'
-import CardDetail from '../components/detailGames/Card'
+import CardDetail from '../components/detailGames/CardDetail'
 
-function DetailGames() {
+function DetailGamesOtherUser() {
 
     document.body.style.backgroundColor="rgba(206, 197, 202, 0.8)"
 
@@ -19,4 +19,4 @@ function DetailGames() {
   )
 }
 
-export default DetailGames
+export default DetailGamesOtherUser
