@@ -39,13 +39,18 @@ function Navbar() {
 
 
   return (
-    <div style={{display : "flex", width : "100%", backgroundColor : "grey"}}>
-            <div className="left" style={{marginLeft : "50px", flex : "50%", alignItems : "center", display : "flex", alignItems : "center"}}>
-                <Link to="/" style={{textDecoration : "none"}}><h2 style={{color : 'black'}}>Browse</h2></Link>
-                <Link to="/" style={{marginLeft : "20px", textDecoration : "none"}}><h2 style={{color : "black"}}>My Page</h2></Link>
+    <div style={{display : "flex", width : "100%", backgroundColor : "#fff"}}>
+            <div className="navbarLeft" style={{marginLeft : "50px", flex : "50%", alignItems : "center", display : "flex", alignItems : "center"}}>
+                <div className='one'>
+                    <Link to="/" style={{textDecoration : "none"}}><h4 style={{color : 'black'}}>Browse</h4></Link>
+                </div>
+                <div className='second' style={{marginLeft : "20px"}}>
+                    <Link to="/" style={{textDecoration : "none"}}><h4 style={{color : "black"}}>My Games</h4></Link>
+                </div>
+                
             </div>
 
-            <div className="right" style={{display : "flex", flex : "50%", justifyContent : "flex-end", marginRight : "50px", alignItems : "center"}}>
+            <div className="navbarRight" style={{display : "flex", flex : "50%", justifyContent : "flex-end", marginRight : "50px", alignItems : "center"}}>
 
                 <div className="avatar">
                     <Nav.Item className='ms-3 avatarIcon'>
