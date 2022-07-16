@@ -11,31 +11,16 @@ import { useContext } from "react";
 import IconProfile from "../../assets/img/customer.png"
 import IconComplain from "../../assets/img/chatGrey.png"
 import IconLogout from "../../assets/img/logoutRed.png"
+import { UserContext } from '../../context/userContext';
 
 
 function Navbar() {
 
-//     const [state, dispatch] = useContext(UserContext)
+    const [state, dispatch] = useContext(UserContext)
+ 
+    console.log(state);
 
-//   const navigate = useNavigate();
-
-//   const profile = () => {
-//     navigate('/profile')
-//   }
-
-//   const complain = () => {
-//     navigate('/complain')
-//   }
-
-//   const logout = () => {
-//     console.log(state);
-//     dispatch({
-//         type : "LOGOUT",
-//     })
-//     navigate('/')
-//   }
-
-//   const [carts, setCarts] = useState([]);
+    const username = state.user.username
 
 
   return (
@@ -54,7 +39,7 @@ function Navbar() {
 
                 <div className="avatar">
                     <div className="username">
-                        <Link to='/' style={{textDecoration : 'none'}}><h4>username</h4></Link>
+                        <Link to='/' style={{textDecoration : 'none'}}><h4>{username}</h4></Link>
                     </div>
                 </div>
                 </div>

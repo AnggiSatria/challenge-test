@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import IMG from "../../assets/img/outlast.png"
 import { Link } from 'react-router-dom'
+import { Card } from "react-bootstrap"
+import { useQuery } from 'react-query'
+import { API } from '../../config/api'
 
-function Card() {
+
+function Cards() {
 
     const card = [
         {
@@ -30,6 +34,30 @@ function Card() {
         by : 'Red Barrels'
     },
     ]
+
+    const [games, setGames] = useState([]);
+    const [sortType, setSortType] = useState('id');
+
+    // useEffect(() => {
+    //     const sortArray = type => {
+    //       const types = {
+    //         price: 'price',
+    //         qty: 'qty'
+    //       };
+    //       const sortProperty = types[type];
+    //       const sorted = [...datas].sort((a, b) => a[sortProperty] - b[sortProperty]);
+    //       setDatas(sorted);
+    //     };
+    //     sortArray(sortType);
+    //   }, [sortType]);
+
+    let { data: game } = useQuery('games', async () => {
+        const response = await API.get('/games');
+        console.log(response)
+        return setGames(response.data.games);
+    });
+
+
 
   return (
     <div>
@@ -60,4 +88,4 @@ function Card() {
   )
 }
 
-export default Card
+export default Cards

@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from '../components/navbar/navbar'
-import Card from '../components/MyGames/Card'
+import Cards from '../components/MyGames/Card'
 
 function MyGames() {
 
@@ -13,7 +13,7 @@ function MyGames() {
         </nav>
 
         <div className="body">
-            <Card/>
+            <Cards/>
         </div>
     </div> 
   )
