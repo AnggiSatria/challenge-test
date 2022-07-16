@@ -6,7 +6,7 @@ import Navbar from "./components/navbar/navbar"
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Login/>} />
+      <Route path="/login" element={<Login/>} />
       <Route path="/register" element={<Register/>} />
       <Route path='/navbar' element={<Navbar/>} />
     </Routes>

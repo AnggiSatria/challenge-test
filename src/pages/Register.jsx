@@ -4,9 +4,11 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import { Button } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Register() {
+
+    const navigate = useNavigate()
 
     document.body.style.backgroundColor="rgba(206, 197, 202, 0.8)"
 
@@ -33,7 +35,10 @@ function Register() {
   return (
     <div>
         <div className="login" style={{width : "100%"}}>
-                <Form onSubmit={handleSubmit} style={{width : "500px", margin : "auto", backgroundColor : "#fff", paddingLeft : "2%", marginTop : "100px", paddingRight : "3%", paddingTop : "50px", paddingBottom : "50px", borderRadius : "5px"}}>
+                <form action="" onSubmit={handleSubmit} style={{width : "500px", margin : "auto", backgroundColor : "#fff", paddingLeft : "2%", marginTop : "100px", paddingRight : "3%", paddingTop : "50px", paddingBottom : "50px", borderRadius : "5px"}}>
+
+                    <h4 style={{marginLeft : "1%", marginRight : "1%"}}>Register</h4>
+
                     <Box
                     component="form"
                     sx={{
@@ -66,13 +71,17 @@ function Register() {
                         />
                         <TextField name="Your Email" value={form.email} onChange={handleChange} id="outlined-basic" label="email" variant="outlined" style={{width : "100%"}}/>
 
-                    <div className="button" style={{display : "flex", width : "100%", justifyContent : "space-evenly"}}>
-                        <Button type='submit' variant='contained' color='inherit' style={{display : "flex"}}>Register</Button>
-                        <p>Or Already Have An Account?</p><Link to='/' style={{textDecoration : "none", marginLeft : "-30px"}}>Login</Link>
+                    <div className="button" style={{display : "flex", width : "100%", flex : "50%"}}>
+                        <Button type='submit' variant='contained' color='inherit' style={{display : "flex", justifyContent : "flex-start", width : "25%"}}>Register</Button>
+
+                        <div className="right" style={{display : "flex", width : "75%", justifyContent : "center", marginTop : "10px"}}>
+                            <p>Or Already Have An Account?</p><Link to='/login' style={{textDecoration : "none", marginLeft : "10px"}}>Login</Link>
+                        </div>
+                        
                     </div>  
 
                     </Box>
-                </Form>
+                </form>
         </div>
     </div>
   )
