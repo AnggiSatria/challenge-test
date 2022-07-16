@@ -39,7 +39,7 @@ function Navbar() {
 
 
   return (
-    <div style={{display : "flex", width : "100%", backgroundColor : "#fff"}}>
+    <div style={{display : "flex", width : "100%", backgroundColor : "#fff", height : "50px"}}>
             <div className="navbarLeft" style={{marginLeft : "50px", flex : "50%", alignItems : "center", display : "flex", alignItems : "center"}}>
                 <div className='one'>
                     <Link to="/" style={{textDecoration : "none"}}><h4 style={{color : 'black'}}>Browse</h4></Link>
@@ -53,47 +53,9 @@ function Navbar() {
             <div className="navbarRight" style={{display : "flex", flex : "50%", justifyContent : "flex-end", marginRight : "50px", alignItems : "center"}}>
 
                 <div className="avatar">
-                    <Nav.Item className='ms-3 avatarIcon'>
-                                <div className='dropdown'>
-                                    <button
-                                        id="dropdownMenu"
-                                        data-bs-toggle="dropdown"
-                                        aria-expanded="false"
-                                        type="button"
-                                        className='btnDropDown'
-                                        style={{border : 'none', background : "transparent"}}
-                                    >
-                                        <Avatar
-                                            color="#3A3A3A"
-                                            name="Anonim"
-                                            size="50"
-                                            src="https://e7.pngegg.com/pngimages/565/454/png-clipart-user-computer-icons-anonymity-head-miscellaneous-face.png"
-                                            round={true}
-                                        />
-                                    </button>
-                                    <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenu">
-                                        <li>
-                                            <button className="dropdown-item textTitle fs-5" type="button">
-                                                <img src={IconProfile} style={{ width: "25px", height: "25px" }} alt="IconProfile" />
-                                                {" "}Profile
-                                            </button>
-                                        </li>
-                                        <li>
-                                            <button className="dropdown-item textTitle fs-5" type="button">
-                                                <img src={IconComplain} style={{ width: "25px", height: "25px" }} alt="IconComplain" />
-                                                {" "}Complain
-                                            </button>
-                                        </li>
-                                        <li><hr className="dropdown-divider" /></li>
-                                        <li>
-                                            <button className="dropdown-item textTitle fs-5" type="button">
-                                                <img src={IconLogout} style={{ width: "25px", height: "25px" }} alt="IconLogout" />
-                                                {" "}Logout
-                                            </button>
-                                        </li>
-                                    </ul>
-                                </div>
-                    </Nav.Item>
+                    <div className="username">
+                        <Link to='/' style={{textDecoration : 'none'}}><h4>username</h4></Link>
+                    </div>
                 </div>
                 </div>
             </div>

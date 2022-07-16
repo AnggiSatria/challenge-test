@@ -1,8 +1,8 @@
 import React from 'react'
 import Navbar from '../components/navbar/navbar'
-import Cards from '../components/homepage/Card'
+import CardDetail from '../components/Detail Games/Card'
 
-function BrowsePage() {
+function DetailGames() {
 
     document.body.style.backgroundColor="rgba(206, 197, 202, 0.8)"
 
@@ -12,11 +12,11 @@ function BrowsePage() {
             <Navbar />
         </nav>
 
-        <div className="card" style={{minHeight : "93vh", padding : "3%", border : 'none', backgroundColor : "rgba(206, 197, 202, 0.8)"}}>
-            <Cards />
+        <div className="body" style={{padding : "5%", minHeight : "93vh"}}>
+            <CardDetail/>
         </div>
     </div>
   )
 }
 
-export default BrowsePage
+export default DetailGames
